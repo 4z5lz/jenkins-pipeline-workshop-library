@@ -1,5 +1,6 @@
 def call() {
     // calculate GIT lastest commit short-hash
+    echo "I'm buildPreparations"
     gitCommitHash = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
     shortCommitHash = gitCommitHash.take(7)
     // calculate a sample version tag
